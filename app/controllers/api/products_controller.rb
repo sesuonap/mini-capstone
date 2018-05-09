@@ -23,4 +23,8 @@ class Api::ProductsController < ApplicationController
     @product = Product.sixth
     render 'product_six_view.json.jbuilder'
   end 
+  def product_all_action
+    @products = Product.all 
+    render 'product_all_view.json.jbuilder'
+  end 
 end
