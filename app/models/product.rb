@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  belongs_to :supplier
+  has_many :images
+  
 
   def is_discounted?
    price < 400
@@ -11,8 +14,8 @@ class Product < ApplicationRecord
   def total
     tax + price 
   end 
-
-
+  
+  
 
 
 

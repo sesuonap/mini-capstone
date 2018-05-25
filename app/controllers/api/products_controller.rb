@@ -1,5 +1,6 @@
 class Api::ProductsController < ApplicationController
   def index 
+    
     @products = Product.all
 
     search_term = params[:search]
@@ -20,9 +21,10 @@ class Api::ProductsController < ApplicationController
     end
 
     
-
+  
     render 'index.json.jbuilder'
-  end 
+  
+end 
 
   def show
     product_id = params[:id]
@@ -34,8 +36,9 @@ class Api::ProductsController < ApplicationController
     @product = Product.new(
                             name: params[:name],
                             price: params[:price],
-                            image_url: params[:image_url],
-                            description: params[:description]
+                            
+                            description: params[:description],
+                            supplier_id: params[:supplier_id]
                           )
     @product.save
     render 'show.json.jbuilder'
@@ -47,8 +50,9 @@ class Api::ProductsController < ApplicationController
 
     @product.name = params[:name] || @product.name
     @product.price = params[:price] || @product.price
-    @product.image_url = params[:image_url] || @product.image_url
+    
     @product.description = params[:description] || @product.description
+    @product.supplier_id = params[:supplier_id] || @product.supplier_id
 
     @product.save
     render 'show.json.jbuilder'
