@@ -32,4 +32,27 @@
 
 # Image.create(product_id: 11, image_url: "https://vignette.wikia.nocookie.net/fortnite/images/1/1b/Icon_Sniper_01_L.png/revision/latest?cb=20170806004511")
 
+# x = ProductCategory.new(product_id: 1, category_id: 1)
+# x.save 
+
+# x = ProductCategory.new(product_id: 2, category_id: 1)
+# x.save 
+
+# x = ProductCategory.new(product_id: 3, category_id: 1)
+# x.save
+
+# x = ProductCategory.new(product_id: 4, category_id: 1)
+# x.save
+
+# x = ProductCategory.new(product_id: 5, category_id: 1)
+# x.save 
+
+# x = ProductCategory.new(product_id: 6, category_id: 2)
+# x.save 
+
+# x = ProductCategory.new(product_id: 9, category_id: 2)
+# x.save 
+
+# x = ProductCategory.new(product_id: 11, category_id: 1)
+# x.save 
 
